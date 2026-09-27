@@ -2,14 +2,15 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc アクティブなファイルのビルド",
+            "label": "debug",
             "command": "/usr/bin/gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-lm"// link libm (math)
             ],
             "options": {
                 "cwd": "${fileDirname}"
